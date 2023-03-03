@@ -258,7 +258,7 @@ column_names_dict = {
     'LOAN_AGE': 16,
     'REM_MONTHS': 17,
     'ADJ_REM_MONTHS': 18,
-    'MATR_DT': 19,
+    'MATURITY_DATE': 19,
     'OLTV': 20,
     'OCLTV': 21,
     'NUM_BO': 22,
@@ -275,7 +275,7 @@ column_names_dict = {
     'ZIP': 33,
     'MI_PCT': 34,
     'PRODUCT': 35,
-    'PPMT_FLG': 36,
+    'PPMT_FLAG': 36,
     'IO': 37,
     'FIRST_PAY_IO': 38,
     'MNTHS_TO_AMTZ_IO': 39,
@@ -284,9 +284,9 @@ column_names_dict = {
     'MOD_FLAG': 42,
     'MI_CANCEL_FLAG': 43,
     'ZERO_BAL_CODE': 44,
-    'ZB_DTE': 45,
+    'ZB_DATE': 45,
     'LAST_UPB': 46,
-    'RPRCH_DTE': 47,
+    'RPRCH_DATE': 47,
     'CURR_SCHD_PRNCPL': 48,
     'TOT_SCHD_PRNCPL': 49,
     'UNSCHD_PRNCPL_CURR': 50,
@@ -352,7 +352,7 @@ column_names_dict = {
 static_fields = ['LOAN_ID', 'CHANNEL', 'SELLER', 'ORIG_RATE', 'ORIG_UPB', 'ORIG_TERM', 'ORIG_DATE',
                  'FIRST_PAY', 'OLTV', 'OCLTV', 'NUM_BO', 'DTI', 'CSCORE_B', 'CSCORE_C', 'FIRST_FLAG', 'PURPOSE', 'PROP',
                  'NO_UNITS', 'OCC_STAT', 'MSA', 'STATE', 'ZIP', 'MI_PCT', 'PRODUCT', 'MI_TYPE',
-                 'RELOCATION_MORTGAGE_INDICATOR', 'HIGH_BALANCE_LOAN_INDICATOR', 'PPMT_FLG', 'IO']
+                 'RELOCATION_MORTGAGE_INDICATOR', 'HIGH_BALANCE_LOAN_INDICATOR', 'PPMT_FLAG', 'IO']
 
 counterparty_static = ['LOAN_ID', 'NUM_BO', 'DTI', 'CSCORE_B', 'CSCORE_C', 'FIRST_FLAG']
 
@@ -375,14 +375,14 @@ loan_static = ['LOAN_ID',
                'MI_PCT',
                'MI_TYPE',
                'OCLTV',
-               'PPMT_FLG',
+               'PPMT_FLAG',
                'IO']
 
 loan_dynamic = ['LOAN_ID',
                 'ACT_PERIOD',
                 'HIGH_LOAN_TO_VALUE_HLTV_REFINANCE_OPTION_INDICATOR',
                 'ZERO_BAL_CODE',
-                'ZB_DTE',
+                'ZB_DATE',
                 'LAST_UPB',
                 'TOT_SCHD_PRNCPL',
                 'LAST_PAID_INSTALLMENT_DATE',
@@ -401,7 +401,7 @@ loan_dynamic = ['LOAN_ID',
                 'LOAN_AGE',
                 'REM_MONTHS',
                 'ADJ_REM_MONTHS',
-                'MATR_DT',
+                'MATURITY_DATE',
                 'SERV_IND']
 
 property_collateral_static = ['LOAN_ID', 'PROP', 'NO_UNITS', 'OCC_STAT', 'STATE', 'MSA', 'ZIP']

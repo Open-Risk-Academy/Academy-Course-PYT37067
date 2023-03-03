@@ -48,7 +48,7 @@ def create_loan_table(df):
                'HIGH_BALANCE_LOAN_INDICATOR': 'high_balance_loan_indicator',
                'MI_PCT': 'mortgage_insurance_percentage',
                'MI_TYPE': 'mortgage_insurance_type',
-               'PPMT_FLG': 'prepayment_penalty_indicator',
+               'PPMT_FLAG': 'prepayment_penalty_indicator',
                'IO': 'interest_only_loan_indicator'}
 
     _lt = _lt.rename(columns=columns)

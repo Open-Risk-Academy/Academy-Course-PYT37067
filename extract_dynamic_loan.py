@@ -36,7 +36,7 @@ def create_loan_state_table(df):
                'ACT_PERIOD': 'portfolio_snapshot_id',
                'HIGH_LOAN_TO_VALUE_HLTV_REFINANCE_OPTION_INDICATOR': 'high_loan_to_value_refinance_option_indicator',
                'ZERO_BAL_CODE': 'zero_balance_code',
-               'ZB_DTE': 'zero_balance_effective_date',
+               'ZB_DATE': 'zero_balance_effective_date',
                'LAST_UPB': 'upb_at_the_time_of_removal',
                'TOT_SCHD_PRNCPL': 'total_principal_current',
                'LAST_PAID_INSTALLMENT_DATE': 'last_paid_installment_date',
@@ -55,7 +55,7 @@ def create_loan_state_table(df):
                'LOAN_AGE': 'loan_age',
                'REM_MONTHS': 'remaining_months_to_legal_maturity',
                'ADJ_REM_MONTHS': 'remaining_months_to_maturity',
-               'MATR_DT': 'maturity_date',
+               'MATURITY_DATE': 'maturity_date',
                'SERV_IND': 'servicing_activity_indicator'}
 
     _lt = _lt.rename(columns=columns)
