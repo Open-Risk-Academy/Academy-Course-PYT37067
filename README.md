@@ -1,7 +1,7 @@
 # Academy-Course-PYT37066
 Processing Agency Mortgage Data with Awk, Pandas and Django - Part 2: Performing Book
 
-<p>This crash course illustrates how to process loan-level US Agency mortgage data using awk, pandas and django. The second part of the course focuses on performing book attributes. It requires familiarity with command line tools (Ideally a linux environment) and Python. The repository includes various scripts used in the course.</p> 
+This [crash course](https://www.openriskacademy.com/course/view.php?id=67) illustrates how to process loan-level US Agency mortgage data using awk, pandas and django. The second part of the course focuses on performing book attributes. It requires familiarity with command line tools (Ideally a linux environment) and Python. The repository includes various scripts used in the course.
 
 ![Course Image](pyt37066_course_image.png)
 
