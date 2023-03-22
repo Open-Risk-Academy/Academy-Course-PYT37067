@@ -27,7 +27,7 @@ This [crash course](https://www.openriskacademy.com/course/view.php?id=67) illus
     <tr>
         <td><b>Technical</b></td>
         <td></td>
-        <td bgcolor="#EC9126">CrashProgram<br>PYT37066</td>
+        <td bgcolor="#EC9126">CrashProgram<br>PYT37067</td>
         <td></td>
     </tr>
     </tbody>
