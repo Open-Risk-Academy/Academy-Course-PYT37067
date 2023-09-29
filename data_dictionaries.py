@@ -36,7 +36,6 @@ FIRST_TIME_DICT = {True: 0, False: 1, 'Null': 2, 'N': 0, 'Y': 1}
 PROPERTY_DICT = {'CO': 0, 'CP': 1, 'PU': 2, 'MH': 3, 'SF': 4}
 OCCUPANCY_DICT = {'P': 0, 'S': 1, 'I': 2, 'U': 3}
 
-
 ELIGIBILITY_DICT = {'F': 0, 'H': 1, 'R': 2, 'O': 3, '7': 4, 'N': 5}
 PROPERTY_VALUATION_DICT = {'A': 0, 'P': 1, 'R': 2, 'W': 3, 'O': 4, None: 4}
 BORROWER_PLAN_DICT = {'F': 0, 'R': 1, 'T': 2, 'O': 3, 'N': 4, '7': 5, '9': 6, None: 6}

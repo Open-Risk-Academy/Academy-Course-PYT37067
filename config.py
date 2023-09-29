@@ -412,5 +412,4 @@ property_collateral_dynamic = ['LOAN_ID', 'ACT_PERIOD', 'PROPERTY_PRESERVATION_A
                                'PROPERTY_INSPECTION_WAIVER_INDICATOR']
 
 if __name__ == '__main__':
-
     print(len(static_fields))

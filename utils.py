@@ -19,6 +19,7 @@
 # SOFTWARE.
 
 import pandas as pd
+
 from config import column_datatypes
 from config import static_fields
 

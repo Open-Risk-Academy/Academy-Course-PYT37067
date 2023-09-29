@@ -33,8 +33,8 @@
        'servicing_activity_indicator'
 """
 
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 if __name__ == '__main__':
     # load the loan state (variable fields)
@@ -46,4 +46,3 @@ if __name__ == '__main__':
     print(type(rem_mat))
     # plt.show()
     plt.savefig("loan_maturity_all.png")
-
