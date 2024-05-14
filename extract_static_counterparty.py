@@ -40,4 +40,4 @@ if __name__ == '__main__':
 
     counterparty_all = pd.concat(counterparties)
     print(len(counterparty_all.index))
-    counterparty_all.to_csv("counterparty.csv", sep='|', index=False)
+    counterparty_all.to_csv("DB_TABLES/counterparty.csv", sep='|', index=False)

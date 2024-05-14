@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,11 @@ input_directory = "./PARTS/"
 
 if __name__ == '__main__':
 
+    # create file list
     files = os.listdir(input_directory)
     input_files = [input_directory + f for f in files if os.path.isfile(input_directory + '/' + f)]
 
+    # operate on file list
     for in_file in input_files:
         input_table = load_file(in_file, column_names)
         tmp1 = input_table.groupby('LOAN_ID')

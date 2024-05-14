@@ -18,32 +18,24 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import pandas as pd
-
-from config import column_datatypes
-from config import static_fields
-
-
-# Set up a function to read in the Loan Performance files
-
-def load_file(filename, col_names):
-    df = pd.read_csv(filename,
-                     sep="|",
-                     names=col_names,
-                     dtype=column_datatypes
-                     )
-    return df
-
-
-def create_static_table(df):
-    df1 = df.copy()
-    df1['ACT_PERIOD_NUM'] = df1['ACT_PERIOD'].apply(
-        lambda x: 12 * int(str(x)[1:5]) + int(str(x)[0:1]) if len(str(x)) == 5 else 12 * int(str(x)[2:6]) + int(
-            str(x)[0:2]) if len(str(x)) == 6 else 0)
-    selected_fields = static_fields.copy()
-    selected_fields.append('ACT_PERIOD_NUM')
-    selected_fields.append('ACT_PERIOD')
-    df1 = df1[selected_fields]
-    _static_table = df1.loc[df1.groupby('LOAN_ID')['ACT_PERIOD_NUM'].idxmin()]
-    del selected_fields
-    return _static_table
+BEGIN {
+    RowCount = 0
+    PartCount = 0
+    # File = "2022Q2"
+    # File = "2011Q1"
+}
+{
+    if ($2 in chunk)
+        print >> "./PARTS/"File"."chunk[$2]".part.csv"
+    else {
+        chunk[$2] = PartCount
+        print > "./PARTS/"File"."chunk[$2]".part.csv"
+    }
+    if (RowCount % 100000 == 0)
+        PartCount++
+    RowCount++
+}
+END {
+    for (var in chunk)
+        print var ": " chunk[var]
+}

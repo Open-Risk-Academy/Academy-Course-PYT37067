@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@ import pandas as pd
 
 if __name__ == '__main__':
     # load the loan state (variable fields)
-    input_file = "loan_state.csv"
+    input_file = "DB_TABLES/loan_state.csv"
     input_table = pd.read_csv(input_file, header=0, sep='|')
 
     rem_mat = input_table['remaining_months_to_maturity'].squeeze()

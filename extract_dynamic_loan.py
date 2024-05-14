@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     input_files = [input_directory + f for f in files if os.path.isfile(input_directory + '/' + f)]
 
     loan_states = []
-    for in_file in input_files[:1]:
+    for in_file in input_files[:10]:
         input_table = load_file(in_file, column_names)
         loan_state_table = create_loan_state_table(input_table)
         print(len(loan_state_table.index))
@@ -93,4 +93,4 @@ if __name__ == '__main__':
 
     loans_states_all = pd.concat(loan_states)
     print(len(loans_states_all.index))
-    loans_states_all.to_csv("loan_state.csv", sep='|', index=False)
+    loans_states_all.to_csv("DB_TABLES/loan_state.csv", sep='|', index=False)

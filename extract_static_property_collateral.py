@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -64,4 +64,4 @@ if __name__ == '__main__':
 
     properties_all = pd.concat(properties)
     print(len(properties_all.index))
-    properties_all.to_csv("property_collateral.csv", sep='|', index=False)
+    properties_all.to_csv("DB_TABLES/property_collateral.csv", sep='|', index=False)

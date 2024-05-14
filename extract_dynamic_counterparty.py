@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -42,14 +42,14 @@ def create_counterparty_state_table(df):
 if __name__ == '__main__':
 
     input_directory = "./PERF/"
-    acquisition_year = '2010'
+    acquisition_year = '2011'
     acquisition_qtr = 'Q2'
 
     files = os.listdir(input_directory)
     input_files = [input_directory + f for f in files if os.path.isfile(input_directory + '/' + f)]
 
     counterparty_states = []
-    for in_file in input_files[:1]:
+    for in_file in input_files[:10]:
         input_table = load_file(in_file, column_names)
         counterparty_state_table = create_counterparty_state_table(input_table)
         print(len(counterparty_state_table.index))
@@ -57,4 +57,4 @@ if __name__ == '__main__':
 
     counterparty_state_all = pd.concat(counterparty_states)
     print(len(counterparty_state_all.index))
-    counterparty_state_all.to_csv("counterparty_state.csv", sep='|', index=False)
+    counterparty_state_all.to_csv("DB_TABLES/counterparty_state.csv", sep='|', index=False)

@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -45,11 +45,14 @@ def create_portfolio_snapshot_table(df):
 
 if __name__ == '__main__':
     input_directory = "./PARTS/"
-    filename = input_directory + '2010Q2.100.part.csv'
+    filename = input_directory + '2011Q2.100.part.csv'
 
     files = os.listdir(input_directory)
 
     input_table = load_file(filename, column_names)
     static_table = create_static_table(input_table)
+    portfolio_table = create_portfolio_table(static_table)
+    portfolio_table.to_csv("DB_TABLES/portfolio.csv", sep='|', index=False)
+
     portfolio_snapshot_table = create_portfolio_snapshot_table(input_table)
-    portfolio_snapshot_table.to_csv("portfolio_snapshot.csv", sep='|', index=False)
+    portfolio_snapshot_table.to_csv("DB_TABLES/portfolio_snapshot.csv", sep='|', index=False)

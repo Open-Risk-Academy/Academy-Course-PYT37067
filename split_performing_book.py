@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -35,9 +35,9 @@ if __name__ == '__main__':
     input_files = [input_directory + f for f in files if os.path.isfile(input_directory + '/' + f)]
     output_files = [output_directory + f for f in files if os.path.isfile(input_directory + '/' + f)]
 
-    i = 0
+    i = 1
     for in_file, out_file in zip(input_files, output_files):
-        if i < 10:
+        if i > 0:
             input_table = load_file(in_file, column_names)
             tmp1 = input_table.groupby('LOAN_ID')
             output_groups = []

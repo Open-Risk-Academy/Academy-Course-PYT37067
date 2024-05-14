@@ -1,4 +1,4 @@
-# Copyright (c) 2023 Open Risk (https://www.openriskmanagement.com)
+# Copyright (c) 2023 - 2024 Open Risk (https://www.openriskmanagement.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -83,4 +83,4 @@ if __name__ == '__main__':
 
     loans_all = pd.concat(loans)
     print(len(loans_all.index))
-    loans_all.to_csv("loan.csv", sep='|', index=False)
+    loans_all.to_csv("DB_TABLES/loan.csv", sep='|', index=False)

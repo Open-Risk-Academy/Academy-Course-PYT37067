@@ -18,7 +18,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
 import pandas as pd
 
 column_names = ["POOL_ID",
@@ -67,7 +66,7 @@ column_names = ["POOL_ID",
                 "ZERO_BAL_CODE",
                 "ZB_DATE",
                 "LAST_UPB",
-                "RPRCH_DTE",
+                "REPURCHASE_DATE",
                 "CURR_SCHD_PRNCPL",
                 "TOT_SCHD_PRNCPL",
                 "UNSCHD_PRNCPL_CURR",
@@ -127,30 +126,28 @@ column_names = ["POOL_ID",
                 "RE_PROCS_FLAG",
                 "ADR_TYPE",
                 "ADR_COUNT",
-                "ADR_UPB",
-                "PDME",
-                "INTEREST_BEARING_UPB"]
+                "ADR_UPB"]
 
 column_datatypes = {
     "POOL_ID": str,
-    "LOAN_ID": pd.Int64Dtype(),
-    "ACT_PERIOD": pd.Int64Dtype(),
+    "LOAN_ID": str,
+    "ACT_PERIOD": str,
     "CHANNEL": str,
     "SELLER": str,
     "SERVICER": str,
     "MASTER_SERVICER": str,
     "ORIG_RATE": float,
-    "CURR_RATE": float,
+    "CURRENT_RATE": float,
     "ORIG_UPB": float,
     "ISSUANCE_UPB": float,
     "CURRENT_UPB": float,
     "ORIG_TERM": pd.Int64Dtype(),
-    "ORIG_DATE": pd.Int64Dtype(),
-    "FIRST_PAY": pd.Int64Dtype(),
+    "ORIG_DATE": str,
+    "FIRST_PAY": str,
     "LOAN_AGE": pd.Int64Dtype(),
     "REM_MONTHS": pd.Int64Dtype(),
     "ADJ_REM_MONTHS": pd.Int64Dtype(),
-    "MATR_DT": pd.Int64Dtype(),
+    "MATURITY_DATE": str,
     "OLTV": float,
     "OCLTV": float,
     "NUM_BO": pd.Int64Dtype(),
@@ -167,7 +164,7 @@ column_datatypes = {
     "ZIP": str,
     "MI_PCT": float,
     "PRODUCT": str,
-    "PPMT_FLG": str,
+    "PPMT_FLAG": str,
     "IO": str,
     "FIRST_PAY_IO": pd.Int64Dtype(),
     "MNTHS_TO_AMTZ_IO": pd.Int64Dtype(),
@@ -176,15 +173,15 @@ column_datatypes = {
     "MOD_FLAG": str,
     "MI_CANCEL_FLAG": str,
     "ZERO_BAL_CODE": str,
-    "ZB_DTE": pd.Int64Dtype(),
+    "ZB_DATE": str,
     "LAST_UPB": float,
-    "RPRCH_DTE": pd.Int64Dtype(),
+    "REPURCHASE_DATE": str,
     "CURR_SCHD_PRNCPL": float,
     "TOT_SCHD_PRNCPL": float,
     "UNSCHD_PRNCPL_CURR": float,
-    "LAST_PAID_INSTALLMENT_DATE": pd.Int64Dtype(),
-    "FORECLOSURE_DATE": pd.Int64Dtype(),
-    "DISPOSITION_DATE": pd.Int64Dtype(),
+    "LAST_PAID_INSTALLMENT_DATE": str,
+    "FORECLOSURE_DATE": str,
+    "DISPOSITION_DATE": str,
     "FORECLOSURE_COSTS": float,
     "PROPERTY_PRESERVATION_AND_REPAIR_COSTS": float,
     "ASSET_RECOVERY_COSTS": float,
@@ -240,8 +237,6 @@ column_datatypes = {
     "ADR_TYPE": str,
     "ADR_COUNT": pd.Int64Dtype(),
     "ADR_UPB": float,
-    "PDME": str,
-    "INTEREST_BEARING_UPB": float
 }
 
 column_names_dict = {
@@ -352,9 +347,7 @@ column_names_dict = {
     'RE_PROCS_FLAG': 105,
     'ADR_TYPE': 106,
     'ADR_COUNT': 107,
-    'ADR_UPB': 108,
-    'PDME': 109,
-    'INTEREST_BEARING_UPB': 110}
+    'ADR_UPB': 108}
 
 static_fields = ['LOAN_ID', 'CHANNEL', 'SELLER', 'ORIG_RATE', 'ORIG_UPB', 'ORIG_TERM', 'ORIG_DATE',
                  'FIRST_PAY', 'OLTV', 'OCLTV', 'NUM_BO', 'DTI', 'CSCORE_B', 'CSCORE_C', 'FIRST_FLAG', 'PURPOSE', 'PROP',
@@ -409,9 +402,7 @@ loan_dynamic = ['LOAN_ID',
                 'REM_MONTHS',
                 'ADJ_REM_MONTHS',
                 'MATURITY_DATE',
-                'SERV_IND',
-                'PDME',
-                'INTEREST_BEARING_UPB']
+                'SERV_IND']
 
 property_collateral_static = ['LOAN_ID', 'PROP', 'NO_UNITS', 'OCC_STAT', 'STATE', 'MSA', 'ZIP']
 
@@ -419,3 +410,6 @@ property_collateral_dynamic = ['LOAN_ID', 'ACT_PERIOD', 'PROPERTY_PRESERVATION_A
                                'MISCELLANEOUS_HOLDING_EXPENSES_AND_CREDITS',
                                'ASSOCIATED_TAXES_FOR_HOLDING_PROPERTY',
                                'PROPERTY_INSPECTION_WAIVER_INDICATOR']
+
+if __name__ == '__main__':
+    print(len(static_fields))
