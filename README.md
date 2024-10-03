@@ -1,9 +1,10 @@
 # Academy-Course-PYT37067
+
 Processing Agency Mortgage Data with Awk, Pandas and Django - Part 2: Performing Book
 
 This [crash course](https://www.openriskacademy.com/course/view.php?id=67) illustrates how to process loan-level US Agency mortgage data using awk, pandas and django. The second part of the course focuses on performing book attributes. It requires familiarity with command line tools (Ideally a linux environment) and Python. The repository includes various scripts used in the course.
 
-![Course Image](pyt37066_course_image.png)
+![Course Image](pyt37067_course_image.png)
 
 <p>
 Please Note: Replicating the data processing steps on an actual Fannie Mae dataset <i>requires</i> the Academy student to download such data themselves from the Data Dynamics website and abide with their terms and conditions.

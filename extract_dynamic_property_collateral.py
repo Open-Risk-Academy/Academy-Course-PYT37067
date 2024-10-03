@@ -18,6 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Script used in Step 3 of the Open Risk Academy Course
+# https://www.openriskacademy.com/mod/page/view.php?id=754
 
 import os
 

@@ -18,6 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Script used in Step 4 of the Open Risk Academy Course
+# https://www.openriskacademy.com/mod/page/view.php?id=754
+
 """
 ['loan_identifier', 'portfolio_snapshot_id',
        'high_loan_to_value_refinance_option_indicator', 'zero_balance_code',

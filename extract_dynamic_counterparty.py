@@ -18,6 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Script used in Step 3 of the Open Risk Academy Course
+# https://www.openriskacademy.com/mod/page/view.php?id=754
 
 import os
 
@@ -42,7 +44,7 @@ def create_counterparty_state_table(df):
 if __name__ == '__main__':
 
     input_directory = "./PERF/"
-    acquisition_year = '2011'
+    acquisition_year = '2010'
     acquisition_qtr = 'Q2'
 
     files = os.listdir(input_directory)

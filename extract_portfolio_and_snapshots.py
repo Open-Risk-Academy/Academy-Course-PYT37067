@@ -18,6 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Script used in Step 3 of the Open Risk Academy Course
+# https://www.openriskacademy.com/mod/page/view.php?id=754
+
 import os
 
 import pandas as pd
@@ -45,7 +48,7 @@ def create_portfolio_snapshot_table(df):
 
 if __name__ == '__main__':
     input_directory = "./PARTS/"
-    filename = input_directory + '2011Q2.100.part.csv'
+    filename = input_directory + '2010Q2.100.part.csv'
 
     files = os.listdir(input_directory)
 
